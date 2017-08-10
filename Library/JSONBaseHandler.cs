@@ -35,9 +35,10 @@ namespace Library
             _booksBase.Add(new Book(title, author, year, ++_maxIdxValue));
             _UploadBase();
         }
-        public void DeleteBook()
+        public void DeleteBook(Book toDelete)
         {
-
+            _booksBase = _booksBase.Where(book => book != toDelete).ToList();
+            _UploadBase();
         }
         public IEnumerable<Book> FindBook(string author, string title, string year)
         {

@@ -9,7 +9,6 @@
         ">
     <Grid>
         <Button x:Name="addBookButton" Content="Add book" HorizontalAlignment="Left" Height="28" Margin="211,43,0,0" VerticalAlignment="Top" Width="87" Click="addBookButton_Click" />
-        <Button x:Name="deleteBookButton" Content="Delete book" HorizontalAlignment="Left" Height="28" Margin="10,76,0,0" VerticalAlignment="Top" Width="87"/>
         <Button x:Name="findBookButton" Content="Find book" HorizontalAlignment="Left" Height="28" Margin="320,43,0,0" VerticalAlignment="Top" Width="87" Click="findBookButton_Click"/>
         <Grid Margin="10,10,486,281">
             <TextBox x:Name="authorTextBox" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="28" Margin="66,0,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" TextBlock.TextAlignment="Center" TextAlignment="Center" Width="130"/>
