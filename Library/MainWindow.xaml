@@ -7,9 +7,15 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <Button x:Name="addBookButton" Content="Add book" HorizontalAlignment="Left" Height="28" Margin="10,10,0,0" VerticalAlignment="Top" Width="87"/>
+        <Button x:Name="addBookButton" Content="Add book" HorizontalAlignment="Left" Height="28" Margin="10,10,0,0" VerticalAlignment="Top" Width="87" Click="addBookButton_Click" />
         <Button x:Name="deleteBookButton" Content="Delete book" HorizontalAlignment="Left" Height="28" Margin="10,43,0,0" VerticalAlignment="Top" Width="87"/>
-        <Button x:Name="findBookButton" Content="Find book" HorizontalAlignment="Left" Height="28" Margin="10,76,0,0" VerticalAlignment="Top" Width="87"/>
+        <Button x:Name="findBookButton" Content="Find book" HorizontalAlignment="Left" Height="28" Margin="10,77,0,0" VerticalAlignment="Top" Width="87"/>
+        <TextBox x:Name="authorTextBox" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="28" Margin="205,10,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" TextBlock.TextAlignment="Center" TextAlignment="Center" Width="130"/>
+        <TextBox x:Name="titleTextBox" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="28" Margin="205,43,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" TextBlock.TextAlignment="Center" TextAlignment="Center" Width="130"/>
+        <TextBox x:Name="yearTextBox" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="28" Margin="205,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" TextBlock.TextAlignment="Center" TextAlignment="Center" Width="130"/>
+        <Label x:Name="authorLabel" Content="Author:" HorizontalAlignment="Left" Height="28" Margin="119,10,0,0" VerticalAlignment="Top" Width="74" HorizontalContentAlignment="Right"/>
+        <Label x:Name="titleLabel" Content="Title:" HorizontalAlignment="Left" Height="28" Margin="119,43,0,0" VerticalAlignment="Top" Width="74" HorizontalContentAlignment="Right"/>
+        <Label x:Name="yearLabel" Content="Year:" HorizontalAlignment="Left" Height="28" Margin="119,77,0,0" VerticalAlignment="Top" Width="74" HorizontalContentAlignment="Right"/>
 
     </Grid>
 </Window>
