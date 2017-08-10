@@ -41,5 +41,16 @@ namespace Library
                 MessageBox.Show("Book added!");
             }
         }
+
+        private void findBookButton_Click(object sender, RoutedEventArgs e)
+        {
+            var result = db.FindBook(authorTextBox.Text, titleTextBox.Text, yearTextBox.Text);
+            ListOfBooks ls = new ListOfBooks();
+            foreach(var book in result)
+            {
+                ls.booksListView.Items.Add(book);
+            }
+            ls.Show();
+        }
     }
 }

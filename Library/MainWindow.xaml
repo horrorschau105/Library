@@ -5,17 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Library"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="LibrarySimulator" Height="350" Width="700
+        ">
     <Grid>
-        <Button x:Name="addBookButton" Content="Add book" HorizontalAlignment="Left" Height="28" Margin="10,10,0,0" VerticalAlignment="Top" Width="87" Click="addBookButton_Click" />
-        <Button x:Name="deleteBookButton" Content="Delete book" HorizontalAlignment="Left" Height="28" Margin="10,43,0,0" VerticalAlignment="Top" Width="87"/>
-        <Button x:Name="findBookButton" Content="Find book" HorizontalAlignment="Left" Height="28" Margin="10,77,0,0" VerticalAlignment="Top" Width="87"/>
-        <TextBox x:Name="authorTextBox" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="28" Margin="205,10,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" TextBlock.TextAlignment="Center" TextAlignment="Center" Width="130"/>
-        <TextBox x:Name="titleTextBox" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="28" Margin="205,43,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" TextBlock.TextAlignment="Center" TextAlignment="Center" Width="130"/>
-        <TextBox x:Name="yearTextBox" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="28" Margin="205,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" TextBlock.TextAlignment="Center" TextAlignment="Center" Width="130"/>
-        <Label x:Name="authorLabel" Content="Author:" HorizontalAlignment="Left" Height="28" Margin="119,10,0,0" VerticalAlignment="Top" Width="74" HorizontalContentAlignment="Right"/>
-        <Label x:Name="titleLabel" Content="Title:" HorizontalAlignment="Left" Height="28" Margin="119,43,0,0" VerticalAlignment="Top" Width="74" HorizontalContentAlignment="Right"/>
-        <Label x:Name="yearLabel" Content="Year:" HorizontalAlignment="Left" Height="28" Margin="119,77,0,0" VerticalAlignment="Top" Width="74" HorizontalContentAlignment="Right"/>
+        <Button x:Name="addBookButton" Content="Add book" HorizontalAlignment="Left" Height="28" Margin="211,43,0,0" VerticalAlignment="Top" Width="87" Click="addBookButton_Click" />
+        <Button x:Name="deleteBookButton" Content="Delete book" HorizontalAlignment="Left" Height="28" Margin="10,76,0,0" VerticalAlignment="Top" Width="87"/>
+        <Button x:Name="findBookButton" Content="Find book" HorizontalAlignment="Left" Height="28" Margin="320,43,0,0" VerticalAlignment="Top" Width="87" Click="findBookButton_Click"/>
+        <Grid Margin="10,10,486,281">
+            <TextBox x:Name="authorTextBox" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="28" Margin="66,0,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" TextBlock.TextAlignment="Center" TextAlignment="Center" Width="130"/>
+            <Label x:Name="authorLabel" Content="Author:" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="54" HorizontalContentAlignment="Right"/>
+        </Grid>
+        <Grid Margin="211,10,285,281">
+            <TextBox x:Name="titleTextBox" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="28" Margin="66,0,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" TextBlock.TextAlignment="Center" TextAlignment="Center" Width="130"/>
+            <Label x:Name="titleLabel" Content="Title:" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="54" HorizontalContentAlignment="Right"/>
+        </Grid>
+        <Grid Margin="10,43,547,248">
+            <TextBox x:Name="yearTextBox" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="28" TextWrapping="Wrap" VerticalAlignment="Top" TextBlock.TextAlignment="Center" TextAlignment="Center" Width="69" Margin="66,0,0,0"/>
+            <Label x:Name="yearLabel" Content="Year:" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="54" HorizontalContentAlignment="Right"/>
+
+        </Grid>
 
     </Grid>
 </Window>

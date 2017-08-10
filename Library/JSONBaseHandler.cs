@@ -39,9 +39,13 @@ namespace Library
         {
 
         }
-        public Book FindBook()
+        public IEnumerable<Book> FindBook(string author, string title, string year)
         {
-            return new Book("x", "y", "1");
+           return _booksBase.Where(book =>
+                (author == "" || book.author == author) && (title == "" || book.title == title)
+                && (year == "" || book.year == year));
+            
+
         }
     }
 }
