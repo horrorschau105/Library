@@ -12,12 +12,14 @@ namespace Library
         public string author { get; set; }
         public string title { get; set;}
         public string year { get; set; }
-        public Book(string title, string author, string year, int newId=0)
+        public string borrowedBy { get; set; }
+        public Book(string title, string author, string year, string borrowed, int newId=0)
         {
             id = newId;
             this.title = title;
             this.author = author;
             this.year = year;
+            this.borrowedBy = borrowed;
         }
     }
 }

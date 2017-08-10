@@ -32,13 +32,49 @@ namespace Library
         }
         public void AddBook(string author, string title, string year)
         {
-            _booksBase.Add(new Book(title, author, year, ++_maxIdxValue));
+            _booksBase.Add(new Book(title, author, year, "0" ,++_maxIdxValue));
             _UploadBase();
         }
         public void DeleteBook(Book toDelete)
         {
             _booksBase = _booksBase.Where(book => book != toDelete).ToList();
             _UploadBase();
+        }
+        public bool BorrowBook(string id, string borrower)
+        {
+            int incomingId;
+            try
+            {
+                incomingId = Convert.ToInt32(id);
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            var releasedBook = _booksBase.Where(book => book.id == incomingId);
+            if (releasedBook.Count() != 1) return false;
+            if (releasedBook.ElementAt(0).borrowedBy != "0") return false;
+            releasedBook.ElementAt(0).borrowedBy = borrower;
+            _UploadBase();
+            return true;
+        }
+        public bool ReleaseBook(string id)
+        {
+            int incomingId;
+            try
+            {
+                incomingId = Convert.ToInt32(id);
+            }
+            catch(Exception)
+            {
+                return false;
+            }
+            var releasedBook = _booksBase.Where(book => book.id == incomingId);
+            if(releasedBook.Count() != 1) return false;
+            releasedBook.ElementAt(0).borrowedBy = "0";
+            _UploadBase();
+            return true;
+
         }
         public IEnumerable<Book> FindBook(string author, string title, string year)
         {

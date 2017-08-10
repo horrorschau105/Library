@@ -5,16 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Library"
         mc:Ignorable="d"
-        Title="ListOfBooks" Height="332" Width="350">
+        Title="ListOfBooks" Height="332" Width="350"
+        Keyboard.PreviewKeyDown="Window_PreviewKeyDown">
     <Grid>
         <ListView x:Name="booksListView" HorizontalAlignment="Left" Height="251" Margin="10,10,0,0" VerticalAlignment="Top" Width="322">
             <ListView.View>
 
                 <GridView>
-                    <GridViewColumn Header="Id" Width="50" DisplayMemberBinding="{Binding id}"/>
-                    <GridViewColumn Header="Author" Width="100" DisplayMemberBinding="{Binding author}"/>
-                    <GridViewColumn Header="Title" Width="100" DisplayMemberBinding="{Binding title}"/>
-                    <GridViewColumn Header="Year" Width="72" DisplayMemberBinding="{Binding year}"/>
+                    <GridViewColumn Header="Id" Width="20" DisplayMemberBinding="{Binding id}"/>
+                    <GridViewColumn Header="Author" Width="85" DisplayMemberBinding="{Binding author}"/>
+                    <GridViewColumn Header="Title" Width="85" DisplayMemberBinding="{Binding title}"/>
+                    <GridViewColumn Header="Year" Width="50" DisplayMemberBinding="{Binding year}"/>
+                    <GridViewColumn Header="Borrowed By" Width="77" DisplayMemberBinding="{Binding borrowedBy}"/>
                 </GridView>
             </ListView.View>
         </ListView>

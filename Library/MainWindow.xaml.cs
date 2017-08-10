@@ -48,5 +48,39 @@ namespace Library
             ListOfBooks ls = new ListOfBooks(db, result);
             ls.Show();
         }
+
+        private void borrowButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (idTextBox.Text == "" || borrowerTextBox.Text == "" || borrowerTextBox.Text == "0")
+            {
+                MessageBox.Show("Put book ID and borrower ID!");
+                return;
+            }
+            if (db.BorrowBook(idTextBox.Text, borrowerTextBox.Text))
+            {
+                MessageBox.Show("Book borrowed correctly!");
+            }
+            else
+            {
+                MessageBox.Show("Book couldn't be borrowed");
+            }
+        }
+
+        private void releaseButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (idTextBox.Text == "")
+            {
+                MessageBox.Show("Put book ID!");
+                return;
+            }
+            if (db.ReleaseBook(idTextBox.Text))
+            {
+                MessageBox.Show("Book released!");
+            }
+            else
+            {
+                MessageBox.Show("Book doesn't exist in base!");
+            }
+        }
     }
 }
