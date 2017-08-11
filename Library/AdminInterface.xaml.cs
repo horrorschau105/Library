@@ -20,10 +20,11 @@ namespace Library
     public partial class AdminInterface : Window
     {
         JSONBaseHandler db;
-        public AdminInterface()
+        public AdminInterface(JSONBaseHandler db)
         {
             InitializeComponent();
-             db = new JSONBaseHandler("booksBase.json");
+            this.db = db;
+             
         }
         private void addBookButton_Click(object sender, RoutedEventArgs e)
         {

@@ -5,8 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Library"
         mc:Ignorable="d"
-        Title="Library Simulator - Client" Height="300" Width="300">
-    <Grid>
-        
+        Title="Library Simulator - Client" Height="253" Width="300">
+    <Grid Margin="0,0,-8,-21">
+        <ListView x:Name="booksListView" HorizontalAlignment="Left" Height="164" Margin="10,45,0,0" VerticalAlignment="Top" Width="272">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Author" Width="120" DisplayMemberBinding="{Binding author}"/>
+                    <GridViewColumn Header="Title" Width="147" DisplayMemberBinding="{Binding title}"/>
+                    </GridView>
+            </ListView.View>
+        </ListView>
+        <Label x:Name="infoLabel" Content="Borrowed books:" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" VerticalAlignment="Top" Width="272" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16"/>
+
     </Grid>
 </Window>

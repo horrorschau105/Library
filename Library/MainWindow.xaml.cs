@@ -22,21 +22,22 @@ namespace Library
 
     public partial class MainWindow : Window
     {
-
+        JSONBaseHandler db;
         public MainWindow()
         {
             InitializeComponent();
+            db = new JSONBaseHandler("booksBase.json");
         }
 
         private void loginClientButton_Click(object sender, RoutedEventArgs e)
         {
-            ClientInterface client = new ClientInterface();
+            ClientInterface client = new ClientInterface(db, loginTextBox.Text);
             client.Show();
         }
 
         private void loginAdminButton_Click(object sender, RoutedEventArgs e)
         {
-            AdminInterface admin = new AdminInterface();
+            AdminInterface admin = new AdminInterface(db);
             admin.Show();
         }
     }

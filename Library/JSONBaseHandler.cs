@@ -81,8 +81,10 @@ namespace Library
            return _booksBase.Where(book =>
                 (author == "" || book.author == author) && (title == "" || book.title == title)
                 && (year == "" || book.year == year));
-            
-
+        }
+        public IEnumerable<Book> GetBooksBorrowedBy(string id)
+        {
+            return _booksBase.Where(book => book.borrowedBy == id);
         }
     }
 }

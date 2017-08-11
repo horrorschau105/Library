@@ -19,9 +19,23 @@ namespace Library
     /// </summary>
     public partial class ClientInterface : Window
     {
-        public ClientInterface()
+        JSONBaseHandler db;
+        string clientID;
+        public ClientInterface(JSONBaseHandler db, string id)
         {
             InitializeComponent();
+            this.db = db;
+            clientID = id;
+            ShowBooks();
+        }
+        void ShowBooks()
+        {
+            var toDisplay = db.GetBooksBorrowedBy(clientID);
+            this.booksListView.Items.Clear();
+            foreach(var book in toDisplay)
+            {
+                booksListView.Items.Add(book);
+            }
         }
     }
 }

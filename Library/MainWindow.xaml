@@ -5,13 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Library"
         mc:Ignorable="d"
-        Title="LibrarySimulator" Height="300" Width="300">
+        Title="LibrarySimulator" Height="300" Width="344">
     <Grid>
-        <Button x:Name="loginClientButton" Content="Log as client" HorizontalAlignment="Left" Height="42" Margin="151,56,0,0" VerticalAlignment="Top" Width="131" FontSize="20" Click="loginClientButton_Click"/>
+        <Button x:Name="loginClientButton" Content="Log as client:" HorizontalAlignment="Left" Height="42" Margin="151,56,0,0" VerticalAlignment="Top" Width="131" FontSize="20" Click="loginClientButton_Click"/>
         <Button x:Name="loginAdminButton" Content="Log as admin" HorizontalAlignment="Left" Height="42" Margin="10,56,0,0" VerticalAlignment="Top" Width="136" FontSize="20" Click="loginAdminButton_Click"/>
-        <TextBlock x:Name="loginTextBlock" HorizontalAlignment="Left" Height="46" Margin="10,10,0,0" TextWrapping="Wrap" Text="Choose type of account:" VerticalAlignment="Top" FontSize="25" Width="272" TextAlignment="Center" RenderTransformOrigin="0.5,0.5">
+        <TextBlock x:Name="loginTextBlock" HorizontalAlignment="Left" Height="46" Margin="10,10,0,0" TextWrapping="Wrap" Text="Choose type of account:" VerticalAlignment="Top" FontSize="25" Width="316" TextAlignment="Center" RenderTransformOrigin="0.5,0.5">
 
         </TextBlock>
+        <TextBox x:Name="loginTextBox" HorizontalAlignment="Left" Height="42" Margin="287,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="39" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
 
     </Grid>
 </Window>
