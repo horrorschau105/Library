@@ -27,6 +27,11 @@ namespace Library
             displayedCollection = toDisplay;
             db = database;
             FillListView();
+            db.BaseUpdated += FillListView;
+        }
+        private void FillListView(object o, EventArgs e)
+        {
+            FillListView();
         }
         public void FillListView()
         {

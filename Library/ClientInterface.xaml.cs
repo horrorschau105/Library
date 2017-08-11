@@ -27,6 +27,11 @@ namespace Library
             this.db = db;
             clientID = id;
             ShowBooks();
+            db.BaseUpdated += ShowBooks;
+        }
+        void ShowBooks(object o, EventArgs e)
+        {
+            ShowBooks();
         }
         void ShowBooks()
         {

@@ -13,6 +13,7 @@ namespace Library
         List<Book> _booksBase;
         string _filePath;
         int _maxIdxValue;
+        public event EventHandler BaseUpdated;
         public JSONBaseHandler(string path)
         {
             _filePath = path;
@@ -29,6 +30,8 @@ namespace Library
         {
             string json = JsonConvert.SerializeObject(_booksBase, Formatting.Indented);
             File.WriteAllText(_filePath, json);
+            BaseUpdated.Invoke(this, EventArgs.Empty);
+
         }
         public void AddBook(string author, string title, string year)
         {
