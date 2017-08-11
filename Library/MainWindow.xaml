@@ -5,36 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Library"
         mc:Ignorable="d"
-        Title="LibrarySimulator" Height="350" Width="700
-        ">
-    <Grid Margin="0,0,0,0">
-        <Button x:Name="addBookButton" Content="Add book" HorizontalAlignment="Left" Height="28" Margin="211,43,0,0" VerticalAlignment="Top" Width="87" Click="addBookButton_Click" />
-        <Button x:Name="findBookButton" Content="Find book" HorizontalAlignment="Left" Height="28" Margin="320,43,0,0" VerticalAlignment="Top" Width="87" Click="findBookButton_Click"/>
-        <Grid Margin="10,10,486,281">
-            <TextBox x:Name="authorTextBox" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="28" Margin="66,0,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" TextBlock.TextAlignment="Center" TextAlignment="Center" Width="130"/>
-            <Label x:Name="authorLabel" Content="Author:" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="54" HorizontalContentAlignment="Right"/>
-        </Grid>
-        <Grid Margin="211,10,285,281">
-            <TextBox x:Name="titleTextBox" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="28" Margin="66,0,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" TextBlock.TextAlignment="Center" TextAlignment="Center" Width="130"/>
-            <Label x:Name="titleLabel" Content="Title:" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="54" HorizontalContentAlignment="Right"/>
-        </Grid>
-        <Grid Margin="10,43,547,248">
-            <TextBox x:Name="yearTextBox" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="28" TextWrapping="Wrap" VerticalAlignment="Top" TextBlock.TextAlignment="Center" TextAlignment="Center" Width="69" Margin="66,0,0,0"/>
-            <Label x:Name="yearLabel" Content="Year:" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="54" HorizontalContentAlignment="Right"/>
+        Title="LibrarySimulator" Height="300" Width="300">
+    <Grid>
+        <Button x:Name="loginClientButton" Content="Log as client" HorizontalAlignment="Left" Height="42" Margin="151,56,0,0" VerticalAlignment="Top" Width="131" FontSize="20" Click="loginClientButton_Click"/>
+        <Button x:Name="loginAdminButton" Content="Log as admin" HorizontalAlignment="Left" Height="42" Margin="10,56,0,0" VerticalAlignment="Top" Width="136" FontSize="20" Click="loginAdminButton_Click"/>
+        <TextBlock x:Name="loginTextBlock" HorizontalAlignment="Left" Height="46" Margin="10,10,0,0" TextWrapping="Wrap" Text="Choose type of account:" VerticalAlignment="Top" FontSize="25" Width="272" TextAlignment="Center" RenderTransformOrigin="0.5,0.5">
 
-        </Grid>
-        <Grid Margin="12,96,547,195">
-            <Label x:Name="idLabel" Content="Book ID:" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="54"/>
-            <TextBox x:Name="idTextBox" HorizontalAlignment="Left" Height="28" TextWrapping="Wrap" VerticalAlignment="Top" Width="69" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="64,0,0,0"/>
+        </TextBlock>
 
-        </Grid>
-        <Grid>
-            <Button x:Name="borrowButton" Content="Borrow book" HorizontalAlignment="Left" Height="28" Margin="211,96,0,0" VerticalAlignment="Top" Width="87" Click="borrowButton_Click"/>
-            <Button x:Name="releaseButton" Content="Release book" HorizontalAlignment="Left" Height="28" Margin="211,129,0,0" VerticalAlignment="Top" Width="87" Click="releaseButton_Click"/>
-        </Grid>
-        <Grid>
-            <Label x:Name="borrowerLabel" Content="Borrower:" HorizontalAlignment="Left" Height="28" Margin="10,129,0,0" VerticalAlignment="Top" Width="60" />
-            <TextBox x:Name="borrowerTextBox" HorizontalAlignment="Left" Height="28" Margin="75,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
-        </Grid>
     </Grid>
 </Window>

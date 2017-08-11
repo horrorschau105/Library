@@ -19,68 +19,25 @@ namespace Library
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    
+
     public partial class MainWindow : Window
     {
-        JSONBaseHandler db;
+
         public MainWindow()
         {
             InitializeComponent();
-            db = new JSONBaseHandler("booksBase.json");
         }
 
-        private void addBookButton_Click(object sender, RoutedEventArgs e)
+        private void loginClientButton_Click(object sender, RoutedEventArgs e)
         {
-            if (yearTextBox.Text == "" || authorTextBox.Text == "" || titleTextBox.Text == "")
-            {
-                MessageBox.Show("Fill all textboxes!");
-            }
-            else
-            {
-                db.AddBook(authorTextBox.Text, titleTextBox.Text, yearTextBox.Text);
-                MessageBox.Show("Book added!");
-            }
+            ClientInterface client = new ClientInterface();
+            client.Show();
         }
 
-        private void findBookButton_Click(object sender, RoutedEventArgs e)
+        private void loginAdminButton_Click(object sender, RoutedEventArgs e)
         {
-            var result = db.FindBook(authorTextBox.Text, titleTextBox.Text, yearTextBox.Text);
-            ListOfBooks ls = new ListOfBooks(db, result);
-            ls.Show();
-        }
-
-        private void borrowButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (idTextBox.Text == "" || borrowerTextBox.Text == "" || borrowerTextBox.Text == "0")
-            {
-                MessageBox.Show("Put book ID and borrower ID!");
-                return;
-            }
-            if (db.BorrowBook(idTextBox.Text, borrowerTextBox.Text))
-            {
-                MessageBox.Show("Book borrowed correctly!");
-            }
-            else
-            {
-                MessageBox.Show("Book couldn't be borrowed");
-            }
-        }
-
-        private void releaseButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (idTextBox.Text == "")
-            {
-                MessageBox.Show("Put book ID!");
-                return;
-            }
-            if (db.ReleaseBook(idTextBox.Text))
-            {
-                MessageBox.Show("Book released!");
-            }
-            else
-            {
-                MessageBox.Show("Book doesn't exist in base!");
-            }
+            AdminInterface admin = new AdminInterface();
+            admin.Show();
         }
     }
 }

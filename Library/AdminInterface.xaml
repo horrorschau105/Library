@@ -1,0 +1,41 @@
+﻿
+<Window x:Class="Library.AdminInterface"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Library"
+        mc:Ignorable="d"
+        Title="LibrarySimulator - Administrator" Height="350" Width="700
+        ">
+    <Grid Margin="0,0,0,0">
+        <Button x:Name="addBookButton" Content="Add book" HorizontalAlignment="Left" Height="28" Margin="211,43,0,0" VerticalAlignment="Top" Width="87" Click="addBookButton_Click" />
+        <Button x:Name="findBookButton" Content="Find book" HorizontalAlignment="Left" Height="28" Margin="320,43,0,0" VerticalAlignment="Top" Width="87" Click="findBookButton_Click"/>
+        <Grid Margin="10,10,486,281">
+            <TextBox x:Name="authorTextBox" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="28" Margin="66,0,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" TextBlock.TextAlignment="Center" TextAlignment="Center" Width="130"/>
+            <Label x:Name="authorLabel" Content="Author:" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="54" HorizontalContentAlignment="Right"/>
+        </Grid>
+        <Grid Margin="211,10,285,281">
+            <TextBox x:Name="titleTextBox" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="28" Margin="66,0,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" TextBlock.TextAlignment="Center" TextAlignment="Center" Width="130"/>
+            <Label x:Name="titleLabel" Content="Title:" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="54" HorizontalContentAlignment="Right"/>
+        </Grid>
+        <Grid Margin="10,43,547,248">
+            <TextBox x:Name="yearTextBox" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="28" TextWrapping="Wrap" VerticalAlignment="Top" TextBlock.TextAlignment="Center" TextAlignment="Center" Width="69" Margin="66,0,0,0"/>
+            <Label x:Name="yearLabel" Content="Year:" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="54" HorizontalContentAlignment="Right"/>
+
+        </Grid>
+        <Grid Margin="12,96,547,195">
+            <Label x:Name="idLabel" Content="Book ID:" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="54"/>
+            <TextBox x:Name="idTextBox" HorizontalAlignment="Left" Height="28" TextWrapping="Wrap" VerticalAlignment="Top" Width="69" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="64,0,0,0"/>
+
+        </Grid>
+        <Grid>
+            <Button x:Name="borrowButton" Content="Borrow book" HorizontalAlignment="Left" Height="28" Margin="211,96,0,0" VerticalAlignment="Top" Width="87" Click="borrowButton_Click"/>
+            <Button x:Name="releaseButton" Content="Release book" HorizontalAlignment="Left" Height="28" Margin="211,129,0,0" VerticalAlignment="Top" Width="87" Click="releaseButton_Click"/>
+        </Grid>
+        <Grid>
+            <Label x:Name="borrowerLabel" Content="Borrower:" HorizontalAlignment="Left" Height="28" Margin="10,129,0,0" VerticalAlignment="Top" Width="60" />
+            <TextBox x:Name="borrowerTextBox" HorizontalAlignment="Left" Height="28" Margin="75,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+        </Grid>
+    </Grid>
+</Window>
